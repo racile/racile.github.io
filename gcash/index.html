@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Checker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
+    <!-- Logo slot -->
+    <div class="flex justify-center mb-4">
+      <img src="logo.svg" alt="Logo" class="h-16 w-auto">
+    </div>
+
+    <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Cash In/Out Rate Calculator</h1>
+
+    <div class="space-y-4">
+      <input 
+        type="number" 
+        id="amountInput" 
+        placeholder="Enter amount" 
+        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+      <button 
+        onclick="showRate()" 
+        class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+      >
+        Check Rate
+      </button>
+    <p 
+    id="rateOutput" 
+    class="text-center text-2xl text-gray-800 font-semibold mt-4 leading-relaxed"
+    ></p>
+    </div>
+  </div>
+  <script src="gcash.js"></script>
+</body>
+</html>
